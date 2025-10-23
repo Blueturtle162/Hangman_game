@@ -29,7 +29,7 @@ int guess(const char* word) {
             printf("You already guessed that letter!\n");
             return 0;
         }
-    } //AK built hangman
+    } 
     if (strcmp(user_input, word) == 0) {
         printf("Horray! You guessed the word! Rerun the code to play again.\n");
         exit(0);
@@ -104,7 +104,39 @@ int main() {
     if (strikes == 7) {
         printf("You lost! The word was %s.\n", word);
     }
-}
+    //AK built hangman
+    while (strikes <7)
+    if (strikes == 1){
+        printf(" O\n");
+    }else if (strikes == 2){
+        printf(" O\n");
+        printf("/\n");
+    }else if (strikes == 3){
+        printf(" O\n");
+        printf("/|\n");
+    }else if (strikes == 4){
+        printf(" O\n");
+        printf("/|\ \n");
+    }else if (strikes == 5){
+        printf(" O\n");
+        printf("/|\ \n");
+        printf(" |\n");
+    }else if (strikes == 6){
+        printf(" O\n");
+        printf("/|\ \n");
+        printf(" |\n");
+        printf("/\n");
+    }else if (strikes == 7){
+        printf(" O\n");
+        printf("/|\ \n");
+        printf(" |\n");
+        printf("/ \ \n");
+    }else (strikes==0);{
+
+    }
+        
+    }
+
 
 
 
