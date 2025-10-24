@@ -14,7 +14,7 @@ int num_words = sizeof(words) / sizeof(words[0]);
 char guessed_letters[26] = {0};
 int guessed_count = 0;
 
-//KS added user input
+//AT added user input
 int guess(const char* word) {
     char user_input[100];
     printf("Guess a letter: ");
@@ -48,7 +48,37 @@ int guess(const char* word) {
         return 1;
     }
 }
+//AK built hangman
+void build_hangman(int strikes){
+    if (strikes == 1){
+        printf(" O\n");
+    }else if (strikes == 2){
+        printf(" O\n");
+        printf("/\n");
+    }else if (strikes == 3){
+        printf(" O\n");
+        printf("/|\n");
+    }else if (strikes == 4){
+        printf(" O\n");
+        printf("/|\\n");
+    }else if (strikes == 5){
+        printf(" O\n");
+        printf("/|\\n");
+        printf(" |\n");
+    }else if (strikes == 6){
+        printf(" O\n");
+        printf("/|\\n");
+        printf(" |\n");
+        printf("/\n");
+    }else if (strikes == 7){
+        printf(" O\n");
+        printf("/|\\n");
+        printf(" |\n");
+        printf("/ \\n");
+    }else (strikes==0);{
 
+    }
+}
 // KS random and instructions
 int main() {
     srand((unsigned) time(NULL));
@@ -73,6 +103,7 @@ int main() {
         strikes += guess(word);
         guessed_count = strlen(guessed_letters);
         printf("Strikes: %d\n", strikes);
+        build_hangman(strikes);
         for (int i = 0; i < strlen(word); i++) {
             char letter = word[i];
             int found = 0;
@@ -104,36 +135,8 @@ int main() {
     if (strikes == 7) {
         printf("You lost! The word was %s.\n", word);
     }
-    //AK built hangman
-    while (strikes <7)
-    if (strikes == 1){
-        printf(" O\n");
-    }else if (strikes == 2){
-        printf(" O\n");
-        printf("/\n");
-    }else if (strikes == 3){
-        printf(" O\n");
-        printf("/|\n");
-    }else if (strikes == 4){
-        printf(" O\n");
-        printf("/|\ \n");
-    }else if (strikes == 5){
-        printf(" O\n");
-        printf("/|\ \n");
-        printf(" |\n");
-    }else if (strikes == 6){
-        printf(" O\n");
-        printf("/|\ \n");
-        printf(" |\n");
-        printf("/\n");
-    }else if (strikes == 7){
-        printf(" O\n");
-        printf("/|\ \n");
-        printf(" |\n");
-        printf("/ \ \n");
-    }else (strikes==0);{
-
-    }
+    
+   
         
     }
 
