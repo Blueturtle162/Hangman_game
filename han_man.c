@@ -60,24 +60,29 @@ void build_hangman(int strikes){
         printf("/|\n");
     }else if (strikes == 4){
         printf(" O\n");
-        printf("/|\\n");
+        printf("/|\\");
+        printf("\n");
     }else if (strikes == 5){
         printf(" O\n");
-        printf("/|\\n");
+        printf("/|\\");
+        printf("\n");
         printf(" |\n");
     }else if (strikes == 6){
         printf(" O\n");
-        printf("/|\\n");
+        printf("/|\\");
+        printf("\n");
         printf(" |\n");
         printf("/\n");
     }else if (strikes == 7){
         printf(" O\n");
-        printf("/|\\n");
+        printf("/|\\");
+        printf("\n");
         printf(" |\n");
-        printf("/ \\n");
-    }else (strikes==0);{
-
+        printf("/ \\");
+        printf("\n");
     }
+
+    
 }
 // KS random and instructions
 int main() {
@@ -133,7 +138,7 @@ int main() {
 
 
     if (strikes == 7) {
-        printf("You lost! The word was %s.\n", word);
+        
     }
     
    
